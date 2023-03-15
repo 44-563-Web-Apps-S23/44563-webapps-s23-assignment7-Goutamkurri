@@ -46,8 +46,7 @@ function startTime(){
       document.getElementById('target').innerHTML="Too slow";
     } else {
       var endTime=Date.now();
-      var elapsedtime=endTime-reactTime;
-      document.getElementById('target').innerHTML="Time was: "+elapsedtime;
+      document.getElementById('target').innerHTML="Time was: "+(endTime-reactTime);
     }
   }, 8000)
 }
