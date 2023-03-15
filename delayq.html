@@ -38,6 +38,8 @@
 
 	<button onclick="get()">Get</button>
 	<button onclick="delay()">Delay</button>
+	<button onclick="promote()">Promote</button>
+
 
 	
 </body>
@@ -73,6 +75,14 @@
             let container1 = document.getElementById("target")
             container1.append(removedItem,container1.firstChild)
         }
+    }
+	function promote(){
+		let queueItems = document.getElementsByClassName("delayQ")
+        let int=Math.floor(Math.random()*queueItems.length);
+        removedItem=queueItems[int];
+        queueItems[int].remove();
+        let container2 = document.getElementById('target')
+	    container2.insertBefore(removedItem,container2.firstChild)
     }
 </script>
 </html>	
